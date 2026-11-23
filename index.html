@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Credential Lockbox</title>
+<meta name="description" content="Encrypted handoff and storage so AI agents can use secrets that never enter the chat or touch disk. Muse today; others once they can run their own processes.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjRkJCRjI0Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRDk3NzA2Ii8+PC9saW5lYXJHcmFkaWVudD4KPGxpbmVhckdyYWRpZW50IGlkPSJkcnVtMSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI0M5OEYxRiIvPjxzdG9wIG9mZnNldD0iLjI4IiBzdG9wLWNvbG9yPSIjRkRFNjhBIi8+PHN0b3Agb2Zmc2V0PSIuNzIiIHN0b3AtY29sb3I9IiNGREU2OEEiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNDOThGMUYiLz48L2xpbmVhckdyYWRpZW50Pgo8bGluZWFyR3JhZGllbnQgaWQ9IndpbnNoYWRvdyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIuNSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD4KPGNsaXBQYXRoIGlkPSJ3aW5jbGlwIj48cmVjdCB4PSIzNjYiIHk9IjQ3MCIgd2lkdGg9IjI5MiIgaGVpZ2h0PSI2MCIgcng9IjYiLz48L2NsaXBQYXRoPgo8L2RlZnM+CjxyZWN0IHdpZHRoPSIxMDI0IiBoZWlnaHQ9IjEwMjQiIHJ4PSIyMDAiIGZpbGw9IiMxMTE4MjciLz4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTEyIDUwNy41KSBzY2FsZSgxLjE5KSB0cmFuc2xhdGUoLTUxMiAtNTA3LjUpIj4KPHBhdGggZD0iTTM4NCAzMjAgVjE3OCBRMzg0IDEzMiA0MzAgMTMyIEg1OTQgUTY0MCAxMzIgNjQwIDE3OCBWMzIwIiBmaWxsPSJub25lIiBzdHJva2U9IiNFNUU3RUIiIHN0cm9rZS13aWR0aD0iNTAiLz4KPHJlY3QgeD0iMjk2IiB5PSIyOTYiIHdpZHRoPSI0MzIiIGhlaWdodD0iNjEyIiByeD0iNzIiIGZpbGw9InVybCgjZykiLz4KPHJlY3QgeD0iMzUyIiB5PSIzMzgiIHdpZHRoPSIzMjAiIGhlaWdodD0iMzI0IiByeD0iMzYiIGZpbGw9IiMxMTE4MjciIG9wYWNpdHk9Ii4xNiIvPgo8cmVjdCB4PSIzNzAiIHk9IjM3OCIgd2lkdGg9IjYyIiBoZWlnaHQ9IjI0NCIgcng9IjE0IiBmaWxsPSJ1cmwoI2RydW0xKSIvPjxyZWN0IHg9IjM3OSIgeT0iMzk2IiB3aWR0aD0iNDQiIGhlaWdodD0iNSIgcng9IjIuNSIgZmlsbD0iIzExMTgyNyIgb3BhY2l0eT0iLjM4Ii8+PHJlY3QgeD0iMzc5IiB5PSI0MTgiIHdpZHRoPSI0NCIgaGVpZ2h0PSI1IiByeD0iMi41IiBmaWxsPSIjMTExODI3IiBvcGFjaXR5PSIuMzgiLz48cmVjdCB4PSIzNzkiIHk9IjQ0MCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjUiIHJ4PSIyLjUiIGZpbGw9IiMxMTE4MjciIG9wYWNpdHk9Ii4zOCIvPjxyZWN0IHg9IjM3OSIgeT0iNTUwIiB3aWR0aD0iNDQiIGhlaWdodD0iNSIgcng9IjIuNSIgZmlsbD0iIzExMTgyNyIgb3BhY2l0eT0iLjM4Ii8+PHJlY3QgeD0iMzc5IiB5PSI1NzIiIHdpZHRoPSI0NCIgaGVpZ2h0PSI1IiByeD0iMi41IiBmaWxsPSIjMTExODI3IiBvcGFjaXR5PSIuMzgiLz48cmVjdCB4PSIzNzkiIHk9IjU5NCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjUiIHJ4PSIyLjUiIGZpbGw9IiMxMTE4MjciIG9wYWNpdHk9Ii4zOCIvPjxyZWN0IHg9IjQ0NCIgeT0iMzc4IiB3aWR0aD0iNjIiIGhlaWdodD0iMjQ0IiByeD0iMTQiIGZpbGw9InVybCgjZHJ1bTEpIi8+PHJlY3QgeD0iNDUzIiB5PSIzOTYiIHdpZHRoPSI0NCIgaGVpZ2h0PSI1IiByeD0iMi41IiBmaWxsPSIjMTExODI3IiBvcGFjaXR5PSIuMzgiLz48cmVjdCB4PSI0NTMiIHk9IjQxOCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjUiIHJ4PSIyLjUiIGZpbGw9IiMxMTE4MjciIG9wYWNpdHk9Ii4zOCIvPjxyZWN0IHg9IjQ1MyIgeT0iNDQwIiB3aWR0aD0iNDQiIGhlaWdodD0iNSIgcng9IjIuNSIgZmlsbD0iIzExMTgyNyIgb3BhY2l0eT0iLjM4Ii8+PHJlY3QgeD0iNDUzIiB5PSI1NTAiIHdpZHRoPSI0NCIgaGVpZ2h0PSI1IiByeD0iMi41IiBmaWxsPSIjMTExODI3IiBvcGFjaXR5PSIuMzgiLz48cmVjdCB4PSI0NTMiIHk9IjU3MiIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjUiIHJ4PSIyLjUiIGZpbGw9IiMxMTE4MjciIG9wYWNpdHk9Ii4zOCIvPjxyZWN0IHg9IjQ1MyIgeT0iNTk0IiB3aWR0aD0iNDQiIGhlaWdodD0iNSIgcng9IjIuNSIgZmlsbD0iIzExMTgyNyIgb3BhY2l0eT0iLjM4Ii8+PHJlY3QgeD0iNTE4IiB5PSIzNzgiIHdpZHRoPSI2MiIgaGVpZ2h0PSIyNDQiIHJ4PSIxNCIgZmlsbD0idXJsKCNkcnVtMSkiLz48cmVjdCB4PSI1MjciIHk9IjM5NiIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjUiIHJ4PSIyLjUiIGZpbGw9IiMxMTE4MjciIG9wYWNpdHk9Ii4zOCIvPjxyZWN0IHg9IjUyNyIgeT0iNDE4IiB3aWR0aD0iNDQiIGhlaWdodD0iNSIgcng9IjIuNSIgZmlsbD0iIzExMTgyNyIgb3BhY2l0eT0iLjM4Ii8+PHJlY3QgeD0iNTI3IiB5PSI0NDAiIHdpZHRoPSI0NCIgaGVpZ2h0PSI1IiByeD0iMi41IiBmaWxsPSIjMTExODI3IiBvcGFjaXR5PSIuMzgiLz48cmVjdCB4PSI1MjciIHk9IjU1MCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjUiIHJ4PSIyLjUiIGZpbGw9IiMxMTE4MjciIG9wYWNpdHk9Ii4zOCIvPjxyZWN0IHg9IjUyNyIgeT0iNTcyIiB3aWR0aD0iNDQiIGhlaWdodD0iNSIgcng9IjIuNSIgZmlsbD0iIzExMTgyNyIgb3BhY2l0eT0iLjM4Ii8+PHJlY3QgeD0iNTI3IiB5PSI1OTQiIHdpZHRoPSI0NCIgaGVpZ2h0PSI1IiByeD0iMi41IiBmaWxsPSIjMTExODI3IiBvcGFjaXR5PSIuMzgiLz48cmVjdCB4PSI1OTIiIHk9IjM3OCIgd2lkdGg9IjYyIiBoZWlnaHQ9IjI0NCIgcng9IjE0IiBmaWxsPSJ1cmwoI2RydW0xKSIvPjxyZWN0IHg9IjYwMSIgeT0iMzk2IiB3aWR0aD0iNDQiIGhlaWdodD0iNSIgcng9IjIuNSIgZmlsbD0iIzExMTgyNyIgb3BhY2l0eT0iLjM4Ii8+PHJlY3QgeD0iNjAxIiB5PSI0MTgiIHdpZHRoPSI0NCIgaGVpZ2h0PSI1IiByeD0iMi41IiBmaWxsPSIjMTExODI3IiBvcGFjaXR5PSIuMzgiLz48cmVjdCB4PSI2MDEiIHk9IjQ0MCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjUiIHJ4PSIyLjUiIGZpbGw9IiMxMTE4MjciIG9wYWNpdHk9Ii4zOCIvPjxyZWN0IHg9IjYwMSIgeT0iNTUwIiB3aWR0aD0iNDQiIGhlaWdodD0iNSIgcng9IjIuNSIgZmlsbD0iIzExMTgyNyIgb3BhY2l0eT0iLjM4Ii8+PHJlY3QgeD0iNjAxIiB5PSI1NzIiIHdpZHRoPSI0NCIgaGVpZ2h0PSI1IiByeD0iMi41IiBmaWxsPSIjMTExODI3IiBvcGFjaXR5PSIuMzgiLz48cmVjdCB4PSI2MDEiIHk9IjU5NCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjUiIHJ4PSIyLjUiIGZpbGw9IiMxMTE4MjciIG9wYWNpdHk9Ii4zOCIvPjxnIGNsaXAtcGF0aD0idXJsKCN3aW5jbGlwKSI+PHJlY3QgeD0iMzY2IiB5PSI0NzAiIHdpZHRoPSIyOTIiIGhlaWdodD0iMTgiIGZpbGw9InVybCgjd2luc2hhZG93KSIvPjwvZz48ZyBzdHJva2U9IiMxMTE4MjciIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48bGluZSB4MT0iNDAxIiB5MT0iNDgzIiB4Mj0iNDAxIiB5Mj0iNTE3Ii8+PGxpbmUgeDE9IjM4Ni4yMSIgeTE9IjQ5MS41IiB4Mj0iNDE1Ljc5IiB5Mj0iNTA4LjUiLz48bGluZSB4MT0iMzg2LjIxIiB5MT0iNTA4LjUiIHgyPSI0MTUuNzkiIHkyPSI0OTEuNSIvPjwvZz48ZyBzdHJva2U9IiMxMTE4MjciIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48bGluZSB4MT0iNDc1IiB5MT0iNDgzIiB4Mj0iNDc1IiB5Mj0iNTE3Ii8+PGxpbmUgeDE9IjQ2MC4yMSIgeTE9IjQ5MS41IiB4Mj0iNDg5Ljc5IiB5Mj0iNTA4LjUiLz48bGluZSB4MT0iNDYwLjIxIiB5MT0iNTA4LjUiIHgyPSI0ODkuNzkiIHkyPSI0OTEuNSIvPjwvZz48ZyBzdHJva2U9IiMxMTE4MjciIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48bGluZSB4MT0iNTQ5IiB5MT0iNDgzIiB4Mj0iNTQ5IiB5Mj0iNTE3Ii8+PGxpbmUgeDE9IjUzNC4yMSIgeTE9IjQ5MS41IiB4Mj0iNTYzLjc5IiB5Mj0iNTA4LjUiLz48bGluZSB4MT0iNTM0LjIxIiB5MT0iNTA4LjUiIHgyPSI1NjMuNzkiIHkyPSI0OTEuNSIvPjwvZz48ZyBzdHJva2U9IiMxMTE4MjciIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48bGluZSB4MT0iNjIzIiB5MT0iNDgzIiB4Mj0iNjIzIiB5Mj0iNTE3Ii8+PGxpbmUgeDE9IjYwOC4yMSIgeTE9IjQ5MS41IiB4Mj0iNjM3Ljc5IiB5Mj0iNTA4LjUiLz48bGluZSB4MT0iNjA4LjIxIiB5MT0iNTA4LjUiIHgyPSI2MzcuNzkiIHkyPSI0OTEuNSIvPjwvZz48cmVjdCB4PSIzNjAiIHk9IjQ2NCIgd2lkdGg9IjMwNCIgaGVpZ2h0PSI3MiIgcng9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiMxMTE4MjciIHN0cm9rZS13aWR0aD0iMTEiLz48cmVjdCB4PSIzNjAiIHk9IjU0MCIgd2lkdGg9IjMwNCIgaGVpZ2h0PSI0IiBmaWxsPSIjRkZGRkZGIiBvcGFjaXR5PSIuMjUiLz4KCjxyZWN0IHg9IjI5NiIgeT0iNjgyIiB3aWR0aD0iNDMyIiBoZWlnaHQ9IjEwIiBmaWxsPSIjMTExODI3IiBvcGFjaXR5PSIuNDUiLz4KPHJlY3QgeD0iMzUyIiB5PSI3MDYiIHdpZHRoPSIzMjAiIGhlaWdodD0iMTY4IiByeD0iMzAiIGZpbGw9IiMxMTE4MjciLz4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAxNy41KSI+CjxsaW5lIHgxPSI1MTIiIHkxPSI3MTYiIHgyPSI1MTIiIHkyPSI3MzAiIHN0cm9rZT0iI0ZERTY4QSIgc3Ryb2tlLXdpZHRoPSI5IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPGNpcmNsZSBjeD0iNTEyIiBjeT0iNzEyIiByPSI5IiBmaWxsPSIjRkRFNjhBIi8+CjxyZWN0IHg9IjQ0NiIgeT0iNzU2IiB3aWR0aD0iMTgiIGhlaWdodD0iNDQiIHJ4PSI5IiBmaWxsPSIjRkRFNjhBIi8+CjxyZWN0IHg9IjU2MCIgeT0iNzU2IiB3aWR0aD0iMTgiIGhlaWdodD0iNDQiIHJ4PSI5IiBmaWxsPSIjRkRFNjhBIi8+CjxyZWN0IHg9IjQ1OCIgeT0iNzMwIiB3aWR0aD0iMTA4IiBoZWlnaHQ9IjExMiIgcng9IjI2IiBmaWxsPSIjRkRFNjhBIi8+CjxnIHN0cm9rZT0iIzExMTgyNyIgc3Ryb2tlLXdpZHRoPSI2LjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PGxpbmUgeDE9IjQ4OCIgeTE9Ijc2NiIgeDI9IjQ4OCIgeTI9Ijc5MCIvPjxsaW5lIHgxPSI0NzcuNTYiIHkxPSI3NzIuMCIgeDI9IjQ5OC40NCIgeTI9Ijc4NC4wIi8+PGxpbmUgeDE9IjQ3Ny41NiIgeTE9Ijc4NC4wIiB4Mj0iNDk4LjQ0IiB5Mj0iNzcyLjAiLz48L2c+PGcgc3Ryb2tlPSIjMTExODI3IiBzdHJva2Utd2lkdGg9IjYuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48bGluZSB4MT0iNTM2IiB5MT0iNzY2IiB4Mj0iNTM2IiB5Mj0iNzkwIi8+PGxpbmUgeDE9IjUyNS41NiIgeTE9Ijc3Mi4wIiB4Mj0iNTQ2LjQ0IiB5Mj0iNzg0LjAiLz48bGluZSB4MT0iNTI1LjU2IiB5MT0iNzg0LjAiIHgyPSI1NDYuNDQiIHkyPSI3NzIuMCIvPjwvZz4KPHBhdGggZD0iTTQ5MiA4MDUgUTUxMiA4MTkgNTMyIDgwNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTExODI3IiBzdHJva2Utd2lkdGg9IjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L2c+CjwvZz4KPC9zdmc+">
+<style>
+  :root {
+    --ink: #111827;
+    --ink-2: #1a2333;
+    --ink-3: #243047;
+    --line: #2d3a52;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --brass: #fbbf24;
+    --brass-deep: #d97706;
+    --brass-pale: #fde68a;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--ink);
+    color: var(--text);
+    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  a { color: var(--brass-pale); text-underline-offset: 3px; }
+  a:hover { color: var(--brass); }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+
+  header.hero { padding: 72px 0 56px; border-bottom: 1px solid var(--line); }
+  .hero-grid { display: grid; grid-template-columns: 180px 1fr; gap: 40px; align-items: center; }
+  .hero-grid svg { width: 180px; height: 180px; display: block; }
+  h1 { font-size: 2.6rem; line-height: 1.15; margin: 0 0 12px; letter-spacing: -0.01em; }
+  .tagline { font-size: 1.2rem; color: var(--text); margin: 0 0 20px; max-width: 34em; }
+  .tagline strong { color: var(--brass-pale); font-weight: 600; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-block; padding: 10px 18px; border-radius: 8px; font-weight: 600; text-decoration: none;
+    border: 1px solid var(--line); color: var(--text); background: var(--ink-2);
+  }
+  .btn:hover { border-color: var(--brass); color: var(--text); }
+  .btn.primary { background: linear-gradient(135deg, var(--brass), var(--brass-deep)); color: var(--ink); border: none; }
+  .btn.primary:hover { color: var(--ink); filter: brightness(1.07); }
+
+  section { padding: 56px 0; border-bottom: 1px solid var(--line); }
+  h2 { font-size: 1.6rem; margin: 0 0 8px; }
+  .lede { color: var(--muted); margin: 0 0 28px; max-width: 40em; }
+
+
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .panel { background: var(--ink-2); border: 1px solid var(--line); border-radius: 12px; padding: 22px 24px; }
+  .panel h3 { margin: 0 0 10px; font-size: 1.05rem; }
+  .panel ul { margin: 0; padding-left: 1.2em; color: var(--muted); }
+  .panel li { margin: 6px 0; }
+  .panel.yes h3 { color: var(--brass-pale); }
+
+  .repos { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .repo { background: var(--ink-2); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; display: flex; flex-direction: column; }
+  .repo h3 { margin: 0 0 6px; font-size: 1.05rem; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  .repo p { margin: 0 0 14px; color: var(--muted); font-size: 0.97rem; flex: 1; }
+  .repo .meta { font-size: 0.88rem; color: var(--muted); }
+  .badge { display: inline-block; font-size: 0.75rem; font-weight: 600; padding: 2px 8px; border-radius: 999px; margin-left: 6px; vertical-align: 2px; font-family: system-ui, sans-serif; }
+  .badge.soon { background: var(--ink-3); color: var(--muted); border: 1px solid var(--line); }
+  .badge.moving { background: rgba(251,191,36,.14); color: var(--brass-pale); border: 1px solid rgba(251,191,36,.35); }
+
+  .note { color: var(--muted); font-size: 0.95rem; }
+
+  footer { padding: 36px 0 56px; color: var(--muted); font-size: 0.9rem; }
+  footer p { margin: 4px 0; }
+
+  .flow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 12px; align-items: stretch; }
+  .node { background: var(--ink-2); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; gap: 4px; }
+  .node .where { font-size: 0.78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--brass); font-weight: 700; }
+  .node strong { font-size: 1.1rem; }
+  .node span:last-child { color: var(--muted); font-size: 0.95rem; }
+  .arrow { display: grid; place-items: center; color: var(--brass); font-size: 1.6rem; }
+  h3.group { font-size: 0.85rem; text-transform: uppercase; letter-spacing: .08em; color: var(--brass); margin: 28px 0 12px; }
+  h3.group:first-of-type { margin-top: 0; }
+  @media (max-width: 760px) { .flow { grid-template-columns: 1fr; } .arrow { transform: rotate(90deg); } }
+  @media (max-width: 760px) {
+    header.hero { padding: 48px 0 40px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 24px; }
+    .hero-grid svg { width: 128px; height: 128px; }
+    h1 { font-size: 2rem; }
+    .cols, .repos { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <svg role="img" aria-label="Credential Lockbox icon: a brass combination lockbox with a smiling robot inside" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBBF24"/><stop offset="1" stop-color="#D97706"/></linearGradient>
+<linearGradient id="drum1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C98F1F"/><stop offset=".28" stop-color="#FDE68A"/><stop offset=".72" stop-color="#FDE68A"/><stop offset="1" stop-color="#C98F1F"/></linearGradient>
+<linearGradient id="winshadow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000000" stop-opacity=".5"/><stop offset="1" stop-color="#000000" stop-opacity="0"/></linearGradient>
+<clipPath id="winclip"><rect x="366" y="470" width="292" height="60" rx="6"/></clipPath>
+</defs>
+<rect width="1024" height="1024" rx="200" fill="#111827"/>
+<g transform="translate(512 507.5) scale(1.19) translate(-512 -507.5)">
+<path d="M384 320 V178 Q384 132 430 132 H594 Q640 132 640 178 V320" fill="none" stroke="#E5E7EB" stroke-width="50"/>
+<rect x="296" y="296" width="432" height="612" rx="72" fill="url(#g)"/>
+<rect x="352" y="338" width="320" height="324" rx="36" fill="#111827" opacity=".16"/>
+<rect x="370" y="378" width="62" height="244" rx="14" fill="url(#drum1)"/><rect x="379" y="396" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="379" y="418" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="379" y="440" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="379" y="550" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="379" y="572" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="379" y="594" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="444" y="378" width="62" height="244" rx="14" fill="url(#drum1)"/><rect x="453" y="396" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="453" y="418" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="453" y="440" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="453" y="550" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="453" y="572" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="453" y="594" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="518" y="378" width="62" height="244" rx="14" fill="url(#drum1)"/><rect x="527" y="396" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="527" y="418" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="527" y="440" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="527" y="550" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="527" y="572" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="527" y="594" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="592" y="378" width="62" height="244" rx="14" fill="url(#drum1)"/><rect x="601" y="396" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="601" y="418" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="601" y="440" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="601" y="550" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="601" y="572" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><rect x="601" y="594" width="44" height="5" rx="2.5" fill="#111827" opacity=".38"/><g clip-path="url(#winclip)"><rect x="366" y="470" width="292" height="18" fill="url(#winshadow)"/></g><g stroke="#111827" stroke-width="8" stroke-linecap="round"><line x1="401" y1="483" x2="401" y2="517"/><line x1="386.21" y1="491.5" x2="415.79" y2="508.5"/><line x1="386.21" y1="508.5" x2="415.79" y2="491.5"/></g><g stroke="#111827" stroke-width="8" stroke-linecap="round"><line x1="475" y1="483" x2="475" y2="517"/><line x1="460.21" y1="491.5" x2="489.79" y2="508.5"/><line x1="460.21" y1="508.5" x2="489.79" y2="491.5"/></g><g stroke="#111827" stroke-width="8" stroke-linecap="round"><line x1="549" y1="483" x2="549" y2="517"/><line x1="534.21" y1="491.5" x2="563.79" y2="508.5"/><line x1="534.21" y1="508.5" x2="563.79" y2="491.5"/></g><g stroke="#111827" stroke-width="8" stroke-linecap="round"><line x1="623" y1="483" x2="623" y2="517"/><line x1="608.21" y1="491.5" x2="637.79" y2="508.5"/><line x1="608.21" y1="508.5" x2="637.79" y2="491.5"/></g><rect x="360" y="464" width="304" height="72" rx="10" fill="none" stroke="#111827" stroke-width="11"/><rect x="360" y="540" width="304" height="4" fill="#FFFFFF" opacity=".25"/>
+
+<rect x="296" y="682" width="432" height="10" fill="#111827" opacity=".45"/>
+<rect x="352" y="706" width="320" height="168" rx="30" fill="#111827"/>
+<g transform="translate(0 17.5)">
+<line x1="512" y1="716" x2="512" y2="730" stroke="#FDE68A" stroke-width="9" stroke-linecap="round"/>
+<circle cx="512" cy="712" r="9" fill="#FDE68A"/>
+<rect x="446" y="756" width="18" height="44" rx="9" fill="#FDE68A"/>
+<rect x="560" y="756" width="18" height="44" rx="9" fill="#FDE68A"/>
+<rect x="458" y="730" width="108" height="112" rx="26" fill="#FDE68A"/>
+<g stroke="#111827" stroke-width="6.5" stroke-linecap="round"><line x1="488" y1="766" x2="488" y2="790"/><line x1="477.56" y1="772.0" x2="498.44" y2="784.0"/><line x1="477.56" y1="784.0" x2="498.44" y2="772.0"/></g><g stroke="#111827" stroke-width="6.5" stroke-linecap="round"><line x1="536" y1="766" x2="536" y2="790"/><line x1="525.56" y1="772.0" x2="546.44" y2="784.0"/><line x1="525.56" y1="784.0" x2="546.44" y2="772.0"/></g>
+<path d="M492 805 Q512 819 532 805" fill="none" stroke="#111827" stroke-width="9" stroke-linecap="round"/>
+</g>
+</g>
+</svg>
+    <div>
+      <h1>Credential Lockbox</h1>
+      <p class="tagline">Open-source tools for handing passwords and API keys to AI agents, <strong>so the secret never enters the chat.</strong> You encrypt it on your own device, and it's decrypted only for the tool that needs it. The agent itself never sees it.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#projects">See the projects</a>
+        <a class="btn" href="https://github.com/credential-lockbox">GitHub</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="idea">
+  <div class="wrap">
+    <h2>The idea</h2>
+    <p class="lede">AI agents increasingly run tools that need real credentials. Pasting a password into chat puts it in transcripts, logs and the model's context. These projects keep it out of all three.</p>
+    <div class="flow">
+      <div class="node"><span class="where">Your device</span><strong>Lock it</strong><span>You encrypt the credential to your agent's public key, in a browser page your agent sets up for you, or with a small script if you prefer the terminal.</span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node"><span class="where">Chat or a store</span><strong>Carry it</strong><span>Only ciphertext travels or is kept. Readable by no one without the agent's key.</span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node"><span class="where">The agent's machine</span><strong>Use it</strong><span>A helper decrypts it in memory and passes it straight to the one tool that needs it. The agent never sees it.</span></div>
+    </div>
+    <p class="note" style="margin-top:20px">The lockbox in the icon is the whole idea: you put the credential in, and only the agent inside can open it. Its eyes are asterisks because it never sees the password either.</p>
+  </div>
+</section>
+
+<section id="principles">
+  <div class="wrap">
+    <h2>Shared principles</h2>
+    <p class="lede">Every project here keeps the same promises, and says plainly where they stop.</p>
+    <div class="cols">
+      <div class="panel yes">
+        <h3>What they keep</h3>
+        <ul>
+          <li>The secret never enters the chat or the model's context.</li>
+          <li>Nothing decrypted is written to disk by these designs.</li>
+          <li>The private key and the stored ciphertext never share a disk.</li>
+          <li>Install from pinned, reviewed releases, never a moving target.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>What they can't do</h3>
+        <ul>
+          <li>Protect a compromised machine. You have to trust the computer your agent runs on.</li>
+          <li>Stop an agent that's been talked into misusing a credential. That's guarded by rules, not cryptography.</li>
+          <li>Save old copies if the agent's key leaks. Then you change the credentials at their services.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note" style="margin-top:20px">Each project's README carries its own full threat model.</p>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <p class="lede">Pieces that work together. The repositories are moving into this organization; until each one arrives, its link goes to where it lives today.</p>
+
+    <h3 class="group">Handoff</h3>
+    <div class="repos">
+      <div class="repo">
+        <h3>credential-lockbox <span class="badge moving">moving here</span></h3>
+        <p>The core handoff: the agent-side helper that decrypts a credential in memory for one tool, setup and key-rotation instructions, and scripts for encrypting from a terminal on Linux, macOS or Windows.</p>
+        <a class="meta" href="https://github.com/cmeans/muse-field-kit/tree/main/credential-lockbox">Current home: cmeans/muse-field-kit</a>
+      </div>
+      <div class="repo">
+        <h3>credential-lockbox-muse</h3>
+        <p>The main way in: a browser page your Muse builds for you from a pinned release, so you can lock credentials from your phone or computer without a terminal.</p>
+        <span class="meta">credential-lockbox/credential-lockbox-muse</span>
+      </div>
+    </div>
+
+    <h3 class="group">Storage</h3>
+    <div class="repos">
+      <div class="repo">
+        <h3>s3-blob-store <span class="badge moving">moving here</span></h3>
+        <p>A dedicated store on Amazon S3, built for encrypted credentials and usable for any small, already-encrypted blob fetched by exact label. The agent fetches with a token and holds no AWS credentials. Deployed with one CloudShell paste.</p>
+        <a class="meta" href="https://github.com/cmeans/s3-blob-store">Current home: cmeans/s3-blob-store</a>
+      </div>
+      <div class="repo">
+        <h3>s3-blob-store-muse <span class="badge moving">moving here</span></h3>
+        <p>An operator console for s3-blob-store, built as a Muse Space: set the endpoint, then fetch, store and delete encrypted blobs by label.</p>
+        <a class="meta" href="https://github.com/cmeans/s3-blob-store-muse">Current home: cmeans/s3-blob-store-muse</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="agents">
+  <div class="wrap">
+    <h2>Supported agents</h2>
+    <p class="lede"><strong>Muse today.</strong> Other agents can be supported once they can run their own processes, where a secret can be decrypted and used without passing back through the conversation.</p>
+    <p class="note">To start, ask your Muse to set up Credential Lockbox using the instructions in its README. The agent keeps the encrypted credentials in a store you choose, off its own disk; s3-blob-store is one option.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>MIT licensed. © 2026 Chris Means.</p>
+    <p>Independent community projects, not affiliated with or endorsed by Meta.</p>
+    <p>Found a security flaw? Report it through the affected project's SECURITY.md.</p>
+  </div>
+</footer>
+
+</body>
+</html>
