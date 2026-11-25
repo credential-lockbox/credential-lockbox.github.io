@@ -62,6 +62,7 @@
   .repo h3 { margin: 0 0 6px; font-size: 1.05rem; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
   .repo p { margin: 0 0 14px; color: var(--muted); font-size: 0.97rem; flex: 1; }
   .repo .meta { font-size: 0.88rem; color: var(--muted); }
+  .repo .meta a { color: inherit; }
   .badge { display: inline-block; font-size: 0.75rem; font-weight: 600; padding: 2px 8px; border-radius: 999px; margin-left: 6px; vertical-align: 2px; font-family: system-ui, sans-serif; }
   .badge.soon { background: var(--ink-3); color: var(--muted); border: 1px solid var(--line); }
   .badge.moving { background: rgba(251,191,36,.14); color: var(--brass-pale); border: 1px solid rgba(251,191,36,.35); }
@@ -138,7 +139,7 @@
     <h2>The idea</h2>
     <p class="lede">AI agents increasingly run tools that need real credentials. Pasting a password into chat puts it in transcripts, logs and the model's context. These projects keep it out of all three.</p>
     <div class="flow">
-      <div class="node"><span class="where">Your device</span><strong>Lock it</strong><span>You encrypt the credential to your agent's public key, in a browser page your agent sets up for you, or with a small script if you prefer the terminal.</span></div>
+      <div class="node"><span class="where">Your device</span><strong>Lock it</strong><span>You encrypt the credential to your agent's public key, with a small script in the terminal, or (coming soon) in a browser page your agent sets up for you.</span></div>
       <div class="arrow" aria-hidden="true">→</div>
       <div class="node"><span class="where">Chat or a store</span><strong>Carry it</strong><span>Only ciphertext travels or is kept. Readable by no one without the agent's key.</span></div>
       <div class="arrow" aria-hidden="true">→</div>
